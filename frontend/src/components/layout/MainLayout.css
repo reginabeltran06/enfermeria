@@ -59,18 +59,17 @@
 .main-content::-webkit-scrollbar-thumb:hover {
   background: var(--color-text-lighter);
 }
-
 @media (max-width: 768px) {
   .layout-container {
-    margin-left: 0px;
-    margin-top: 20px;
+    margin-left: 0;
+    margin-top: 0;
     width: 100%;
   }
 
   .main-content {
     padding: var(--spacing-md);
-    padding-top: 92px;
-    padding-bottom: 96px;
+    padding-top: calc(132px + env(safe-area-inset-top));
+    padding-bottom: calc(100px + env(safe-area-inset-bottom));
   }
 
   .content-wrapper {
@@ -86,7 +85,8 @@
 @media (max-width: 480px) {
   .main-content {
     padding: var(--spacing-md);
-    padding-top: 92px;
+    padding-top: calc(132px + env(safe-area-inset-top));
+    padding-bottom: calc(100px + env(safe-area-inset-bottom));
   }
 
   .notifications-container {
