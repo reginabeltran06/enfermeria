@@ -1,0 +1,135 @@
+.stock-page {
+  animation: fadeIn 300ms ease-out;
+}
+
+.stock-header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.stock-header h1 {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.stock-subtitle {
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+}
+
+.stock-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: var(--spacing-lg);
+}
+
+.stock-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.stock-form-card,
+.stock-info-card {
+  padding: var(--spacing-xl);
+}
+
+.stock-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.stock-primary-button {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: var(--rounded-lg);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.stock-primary-button:hover:not(:disabled) {
+  background: #caa86a;
+}
+
+.stock-primary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.stock-info-title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stock-info-subtitle {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stock-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.stock-info-grid div {
+  background: var(--color-bg);
+  border-radius: var(--rounded-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.stock-info-grid span {
+  display: block;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stock-info-grid strong {
+  font-size: var(--font-size-3xl);
+  color: var(--color-accent);
+}
+
+.textarea-input {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.stock-form-card,
+.stock-info-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--rounded-2xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+}
+
+@media (max-width: 1000px) {
+  .stock-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stock-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .stock-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

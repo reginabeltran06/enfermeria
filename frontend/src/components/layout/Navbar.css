@@ -1,0 +1,223 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+  height: 100px;
+  background: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  z-index: 999;
+}
+
+.navbar-content {
+  height: 100%;
+  padding: 0 var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+}
+
+.navbar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.navbar-up-logo {
+  display: none;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.navbar-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-white);
+  margin-bottom: 2px;
+}
+
+.navbar-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-lighter);
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-clock {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-bg);
+  border-radius: var(--rounded-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.clock-icon {
+  font-size: 16px;
+}
+
+.clock-time {
+  font-family: "DM Mono", "Courier New", monospace;
+  letter-spacing: 1px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.navbar-alert {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-warning-light);
+  border-radius: var(--rounded-lg);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.navbar-alert:hover {
+  background: var(--color-warning);
+  transform: scale(1.05);
+}
+
+.alert-icon {
+  font-size: 18px;
+  animation: pulse 2s infinite;
+}
+
+.alert-count {
+  min-width: 20px;
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.navbar-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent-light);
+  border: 1px solid rgba(185, 151, 91, 0.4);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-lighter);
+}
+
+.user-role {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+}
+.mobile-logout-btn {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-white);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.mobile-logout-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.mobile-logout-btn:active {
+  transform: scale(0.96);
+}
+
+.mobile-logout-btn svg {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    left: 0px;
+  }
+
+  .navbar-content {
+    padding: 0 var(--spacing-xl);
+    gap: var(--spacing-md);
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    min-width: 0;
+  }
+
+  .navbar-up-logo {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-title {
+    font-size: var(--font-size-lg);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+  }
+
+  .mobile-logout-btn {
+    display: flex;
+    padding: 0px;
+  }
+
+  .navbar-subtitle,
+  .navbar-center,
+  .user-info,
+  .navbar-divider {
+    display: none;
+  }
+}

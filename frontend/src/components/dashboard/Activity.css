@@ -1,0 +1,170 @@
+.activity-panel,
+.alerts-panel {
+  padding: var(--spacing-xl);
+}
+
+.panel-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.activity-list,
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg);
+  border-radius: var(--rounded-lg);
+  border-left: 3px solid transparent;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.activity-item:hover {
+  background: rgba(185, 151, 91, 0.1);
+  border-left-color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+.activity-icon {
+  min-width: 32px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-main {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+}
+
+.activity-medicine {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.activity-type {
+  padding: 2px 8px;
+  border-radius: var(--rounded-sm);
+  background: var(--color-primary);
+  color: var(--color-text-white);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.activity-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+}
+
+.activity-user,
+.activity-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.activity-quantity {
+  min-width: 50px;
+  text-align: right;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+}
+
+.activity-quantity .positive {
+  color: var(--color-success);
+}
+
+.activity-quantity .negative {
+  color: var(--color-error);
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--rounded-lg);
+  border-left: 4px solid;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.alert-bajo_stock,
+.alert-proximo_vencimiento {
+  background: var(--color-warning-light);
+  border-left-color: var(--color-warning);
+}
+
+.alert-vencido {
+  background: var(--color-error-light);
+  border-left-color: var(--color-error);
+}
+
+.alert-item:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+.alert-icon {
+  min-width: 32px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.alert-message {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .activity-main,
+  .activity-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .activity-quantity {
+    text-align: left;
+  }
+}
