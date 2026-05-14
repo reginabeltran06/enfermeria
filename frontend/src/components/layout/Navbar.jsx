@@ -72,7 +72,7 @@ function Navbar({ alertCount = 0 }) {
 
           <button
             className="mobile-logout-btn"
-            onClick={logout}
+            // onClick={logout}
             title="Cerrar sesión"
           >
             {logoutIcon}{" "}

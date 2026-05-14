@@ -30,9 +30,10 @@
 
 .notifications-container {
   position: fixed;
-  top: 100px;
+  top: calc(110px + env(safe-area-inset-top));
   right: var(--spacing-xl);
-  z-index: 2000;
+  width: min(420px, calc(100vw - 32px));
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
@@ -68,24 +69,26 @@
 
   .main-content {
     padding: var(--spacing-md);
-    padding-top: calc(132px + env(safe-area-inset-top));
+    padding-top: calc(120px + env(safe-area-inset-top));
     padding-bottom: calc(100px + env(safe-area-inset-bottom));
   }
 
   .content-wrapper {
     max-width: 100%;
   }
-
   .notifications-container {
-    right: var(--spacing-lg);
-    left: var(--spacing-lg);
+    top: calc(88px + env(safe-area-inset-top));
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    width: auto;
+    z-index: 9999;
   }
 }
 
 @media (max-width: 480px) {
   .main-content {
     padding: var(--spacing-md);
-    padding-top: calc(132px + env(safe-area-inset-top));
+    padding-top: calc(120px + env(safe-area-inset-top));
     padding-bottom: calc(100px + env(safe-area-inset-bottom));
   }
 
