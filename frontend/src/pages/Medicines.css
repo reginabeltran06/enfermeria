@@ -2,6 +2,9 @@
 
 .medicines-page {
   animation: fadeIn 300ms ease-out;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .medicines-header {
@@ -262,6 +265,19 @@
   margin-bottom: var(--spacing-sm);
 }
 
+.medicine-form-section,
+.medicines-list-section,
+.medicine-stat-card {
+  min-width: 0;
+}
+
+.medicines-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 1200px) {
   .medicines-content-grid {
     grid-template-columns: 1fr;
@@ -293,5 +309,94 @@
   .form-actions,
   .medicine-actions {
     flex-direction: column;
+  }
+
+  .medicines-page {
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .medicines-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .medicines-header h1 {
+    font-size: var(--font-size-2xl);
+    line-height: 1.1;
+  }
+
+  .medicines-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .medicines-stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .medicine-stat-card {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+
+  .medicine-stat-icon {
+    width: 46px;
+    height: 46px;
+    font-size: var(--font-size-xl);
+  }
+
+  .medicine-stat-value {
+    font-size: var(--font-size-2xl);
+  }
+
+  .medicines-content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .medicine-form-section,
+  .medicines-list-section {
+    padding: var(--spacing-lg);
+    border-radius: var(--rounded-lg);
+  }
+
+  .section-header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-md);
+  }
+
+  .medicine-search-input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-actions,
+  .medicine-actions {
+    flex-direction: column;
+  }
+
+  .medicine-primary-button,
+  .medicine-secondary-button,
+  .medicine-edit-button,
+  .medicine-delete-button {
+    width: 100%;
+  }
+
+  .medicines-table {
+    min-width: 680px;
+  }
+
+  .medicines-table th,
+  .medicines-table td {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-xs);
   }
 }

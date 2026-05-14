@@ -7,22 +7,25 @@
 .layout-container {
   flex: 1;
   margin-left: 250px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .main-content {
   flex: 1;
-  overflow-y: auto;
-  padding: var(--spacing-2xl);
-  padding-top: calc(100px + var(--spacing-xl));
+  width: 100%;
+  min-width: 0;
+  padding: var(--spacing-xl);
+  padding-top: 124px;
+  padding-bottom: var(--spacing-xl);
 }
 
 .content-wrapper {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  min-width: 0;
 }
 
 .notifications-container {
@@ -60,12 +63,17 @@
 @media (max-width: 768px) {
   .layout-container {
     margin-left: 0px;
+    width: 100%;
   }
 
   .main-content {
-    padding: var(--spacing-lg);
-    padding-top: calc(100px + var(--spacing-lg));
+    padding: var(--spacing-md);
+    padding-top: 92px;
     padding-bottom: 96px;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
   }
 
   .notifications-container {

@@ -181,6 +181,7 @@
 @media (max-width: 768px) {
   .navbar {
     left: 0px;
+    height: 76px;
   }
 
   .navbar-content {
@@ -189,9 +190,9 @@
   }
 
   .navbar-left {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-sm); */
     min-width: 0;
   }
 
