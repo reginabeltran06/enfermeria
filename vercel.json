@@ -2,14 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "experimentalServices": {
     "frontend": {
-      "source": "frontend",
       "framework": "vite",
       "buildCommand": "npm run build",
       "outputDirectory": "dist",
       "installCommand": "npm install"
     },
     "backend": {
-      "source": "backend",
       "framework": "express",
       "installCommand": "npm install"
     }
