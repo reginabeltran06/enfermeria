@@ -79,10 +79,12 @@ function Dashboard() {
       setLoading(false);
     }
   };
+
   useEffect(() => {
-    if (!token) return;
+    // if (!token) return;
     fetchDashboardData();
   }, [token]);
+
   const formatDate = (value) => {
     if (!value) return "Sin fecha";
 

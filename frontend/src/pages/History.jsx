@@ -49,13 +49,18 @@ function History() {
 
   const formatDate = (value) => {
     if (!value) return "Sin fecha";
-    return new Date(value).toLocaleString("es-MX", {
+
+    const normalizedValue = value.endsWith("Z") ? value : `${value}Z`;
+    const date = new Date(normalizedValue);
+
+    return new Intl.DateTimeFormat("es-MX", {
+      timeZone: "America/Mexico_City",
       day: "2-digit",
       month: "short",
-      year: "numeric",
       hour: "2-digit",
       minute: "2-digit",
-    });
+      hour12: true,
+    }).format(date);
   };
 
   if (loading) {
