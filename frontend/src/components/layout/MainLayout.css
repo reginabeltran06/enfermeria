@@ -63,6 +63,7 @@
 @media (max-width: 768px) {
   .layout-container {
     margin-left: 0px;
+    margin-top: 20px;
     width: 100%;
   }
 
@@ -85,6 +86,7 @@
 @media (max-width: 480px) {
   .main-content {
     padding: var(--spacing-md);
+    padding-top: 92px;
   }
 
   .notifications-container {
